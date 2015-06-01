@@ -1,0 +1,5 @@
+/vendor
+/node_modules
+/resources/assets/vendor
+/public/img
+.env

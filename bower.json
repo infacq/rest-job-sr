@@ -1,0 +1,12 @@
+{
+  "name": "anason",
+  "version": "0.1",
+  "authors": [
+    "Infacq <muhaimincs@itronics.com.my>"
+  ],
+  "description": "sesi ujian buat laravel",
+  "keywords": [
+    "laravel"
+  ],
+  "license": "MIT"
+}
