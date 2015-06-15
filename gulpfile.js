@@ -1,5 +1,4 @@
 var elixir = require('laravel-elixir');
-require('laravel-elixir-bower');
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -12,13 +11,11 @@ require('laravel-elixir-bower');
  */
 
 elixir(function(mix) {
-    mix
-		.bower()
-		.scripts()
-		.copy('resources/assets/vendor/material-design-icons/action', 'public/img/action')
+    mix		
+		//.copy('resources/assets/vendor/material-design-icons/action', 'public/img/action')
 		//.copy('resources/assets/vendor/material-design-icons/alert', 'public/img/alert')
 		//.copy('resources/assets/vendor/material-design-icons/av', 'public/img/av')
-		.copy('resources/assets/vendor/material-design-icons/communication', 'public/img/communication');
+		//.copy('resources/assets/vendor/material-design-icons/communication', 'public/img/communication')
 		//.copy('resources/assets/vendor/material-design-icons/content', 'public/img/content')
 		//.copy('resources/assets/vendor/material-design-icons/device', 'public/img/device')
 		//.copy('resources/assets/vendor/material-design-icons/editor', 'public/img/editor')
@@ -30,5 +27,6 @@ elixir(function(mix) {
 		//.copy('resources/assets/vendor/material-design-icons/notification', 'public/img/notification')
 		//.copy('resources/assets/vendor/material-design-icons/social', 'public/img/social')
 		//.copy('resources/assets/vendor/material-design-icons/sprites', 'public/img/sprites')
-		//.copy('resources/assets/vendor/material-design-icons/toggle', 'public/img/toggle');
+		//.copy('resources/assets/vendor/material-design-icons/toggle', 'public/img/toggle')
+		.browserify('app.js');
 });
