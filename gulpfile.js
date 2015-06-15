@@ -12,7 +12,7 @@ var elixir = require('laravel-elixir');
 
 elixir(function(mix) {
     mix		
-		//.copy('resources/assets/vendor/material-design-icons/action', 'public/img/action')
+		//.copy('mode_modules/material-design-icons/action', 'public/img/action')
 		//.copy('resources/assets/vendor/material-design-icons/alert', 'public/img/alert')
 		//.copy('resources/assets/vendor/material-design-icons/av', 'public/img/av')
 		//.copy('resources/assets/vendor/material-design-icons/communication', 'public/img/communication')

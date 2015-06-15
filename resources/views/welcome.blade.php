@@ -9,8 +9,8 @@
 		<md-content>
 			<md-toolbar>
 				<div class="md-toolbar-tools">
-				<md-button class="md-icon-button" aria-label="Settings">
-					<md-icon md-svg-icon="/img/action/svg/production/ic_face_48px.svg"></md-icon>
+				<md-button class="md-icon-button">
+					<md-icon md-svg-icon="/img/rocket.svg"></md-icon>
 				</md-button>
 				<h2><span class="md-title">Service Rocket</span></h2>
 				</div>
@@ -24,23 +24,25 @@
 					<md-card-content>
 						<!-- The row for the city select autocomplete list -->
 						<md-content layout-padding="">
-							{!! Form::open(['name' => 'checkoutForm']) !!}
+							{!! Form::open(['name' => 'checkoutForm', 'url' => 'http://sr-recruit.herokuapp.com/resumes', 'enctype' => 'multipart/form-data']) !!}
 								<md-input-container flex="" class="md-icon-float">
 									<label>Name</label>
 									<md-icon md-svg-icon="/img/action/svg/production/ic_face_48px.svg"></md-icon>									
-									{!! Form::text('appname', null, ['ng-model' => 'appname']); !!}
+									{!! Form::text('name', null, ['ng-model' => 'appname']); !!}
 								</md-input-container>
 								<md-input-container flex="" class="md-icon-float">
 									<label>Email</label>
 									<md-icon md-svg-icon="/img/communication/svg/production/ic_quick_contacts_mail_48px.svg"></md-icon>
-									{!! Form::email('appemail', null, ['ng-model' => 'appemail']); !!}
+									{!! Form::email('email', null, ['ng-model' => 'appemail']); !!}
 								</md-input-container>
 								<md-input-container flex="">
 									<label>Biography</label>
-									{!! Form::textarea('appabout', null, ['ng-model' => 'appabout', 'md-maxlength' => '150']); !!}
+									{!! Form::textarea('about', null, ['ng-model' => 'appabout', 'md-maxlength' => '150']); !!}
 								</md-input-container>							
-								<div ngf-drop ngf-select ng-model="files" class="drop-box" ngf-drag-over-class="dragover" ngf-multiple="true" ngf-allow-dir="true" accept="image/*,application/pdf">Drop pdfs or images here</div>
-								<div ngf-no-file-drop>File Drag/Drop is not supported for this browser</div>
+									<input type="file" name="file">
+								<md-button>
+								{!! Form::submit('Send '); !!}
+								</md-button>
 							{!! Form::close() !!}
 						</md-content>
 						{{-- The submit button --}}
