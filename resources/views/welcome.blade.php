@@ -5,10 +5,10 @@
 		<meta name="csrf-token" content="{!! csrf_token() !!}">
 		<link href="{{ asset('/css/all.css') }}" rel="stylesheet" type="text/css">
 	</head>
-	<body ng-app="jobApp" ng-cloak>
+	<body ng-app="jobApp">
 		<div layout="row" layout-align="center center">
 			{{-- The main action happens here --}}
-			<md-card flex="33">
+			<md-card flex="33" ng-controller="MainCtrl">
 				<img ng-src="https://lh3.googleusercontent.com/-i2TYuCl4Iy4/VNV7muUt3sI/AAAAAAAAAAU/xqhMjZS4fgk/w1001-h563-no/" class="md-card-image" alt="Washed Out">
 				<md-card-content>					
 					<!-- The row for the city select autocomplete list -->
@@ -28,12 +28,10 @@
 								<label>Biography</label>
 								{!! Form::textarea('about', null, ['ng-model' => 'appabout', 'md-maxlength' => '150']); !!}
 							</md-input-container>							
-							<md-button class="md-fab" aria-label="Upload resume">
-								<label for="file-input">
-									<md-icon md-svg-icon="/img/action/svg/production/ic_assignment_48px.svg" />
-								</label> 
-							</md-button> Attach your resume								
-							<input type="file" name="file" id="file-input" style="display: none">
+							<label for="file-input" class="md-button md-fab">
+								<md-icon md-svg-icon="/img/action/svg/production/ic_assignment_48px.svg" />
+							</label> @{{ file.name }}							
+							<input type="file" name="file" ng-model="file" id="file-input" style="display: none">
 							<md-button class="md-fab main" aria-label="Submit application">
 								<md-icon md-svg-icon="/img/content/svg/production/ic_send_48px.svg"></md-icon>
 							</md-button>								
@@ -43,7 +41,6 @@
 				</md-card-content>
 			</md-card>
 		</div>
-		<pre>@{{log}}</pre>
 	<script src="{{ asset('/js/bundle.js') }}"></script>
 	</body>
 </html>
