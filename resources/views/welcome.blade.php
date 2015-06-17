@@ -28,10 +28,10 @@
 								<label>Biography</label>
 								{!! Form::textarea('about', null, ['ng-model' => 'appabout', 'md-maxlength' => '150']); !!}
 							</md-input-container>							
-							<label for="file-input" class="md-button md-fab">
+							<label for="file" class="md-button md-fab">
 								<md-icon md-svg-icon="/img/action/svg/production/ic_assignment_48px.svg" />
-							</label> @{{ file.name }}							
-							<input type="file" name="file" ng-model="file" id="file-input" style="display: none">
+							</label> @{{ docs }}, @{{ appname }}							
+							{!! Form::file('file', ['ng-model' => 'docs']); !!}
 							<md-button class="md-fab main" aria-label="Submit application">
 								<md-icon md-svg-icon="/img/content/svg/production/ic_send_48px.svg"></md-icon>
 							</md-button>								
