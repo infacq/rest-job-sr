@@ -1,20 +1,9 @@
-## Merantau
+## Simple Job Application using Laravel 5 and Angular Material
 
-Ini adalah repo bagi para pembangun aplikasi 
-dalam menyediakan sebuah aplikasi yang berasaskan 
-Laravel 5 dan juga Angular Material. 
-
-Demo aplikasi ini diperoleh dari laman sesawang Airpair. Baca lanjut terus disini https://www.airpair.com/angularjs/posts/material-design-with-angularjs
-
-Repo ini disediakan bertujuan membantu para pembangun dapat membangun sebuah aplikasi dalam tempoh  yang agak singkat
-
-Ikut langkah dibawah untuk melihat web aplikasi ini
+This simple application I made to apply a job using the API REST provided. The form only require you to enter your name, email and a short note about your self. You also can attach your resume. 
 
 ## Installation
-1. Arahkan komputer untuk menjalankan arahan ini `composer install`
-2. Kemudian `npm install`
-3. Kemudian `bower install angular-material`
-4. Kemudian `bower install material-design-icons`
-5. Jalankan `bower init`
-6. Kemudian `gulp`
-7. Kemudian `php artisan serve`
+1. Run`composer install`
+2. `npm install`
+3. Run `gulp`
+4. `php artisan serve`
